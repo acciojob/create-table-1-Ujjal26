@@ -2,17 +2,12 @@ function insert_Row() {
     //Write your code here
   const btn= document.querySelector('input');
 const table= document.querySelector(' #sampleTable');
-
-
-// btn.addEventListener('click',()=>{
-    const newrow=document.createElement('tr');
-    for(let i=1;i<=2;i++){
-        const newdata= document.createElement('td');
-        newdata.textContent= 'New Cell'+i;
-        newrow.appendChild(newdata);
-    }
-    table.prepend(newrow);
-// });
-
-  
+	
+	const newRow = table.insertRow(0);
+	const cell1 = newRow.insertCell(0);
+    const cell2 = newRow.insertCell(1);
+	
+    cell1.textContent = 'New Cell1';
+    cell2.textContent = 'New Cell2';
+	
 }
